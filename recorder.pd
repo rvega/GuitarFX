@@ -1,0 +1,51 @@
+#N canvas 959 320 653 380 10;
+#X obj -32 320 writesf~;
+#X msg 79 239 open track_\$1.wav;
+#X msg 31 237 start;
+#X msg 197 237 stop;
+#X obj 33 19 nbx 3 20 0 100 0 0 empty empty empty 0 -8 0 12 -262144
+-1 -1 0 256 0;
+#X obj 35 72 bng 37 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 393 269 soundfiler;
+#X obj 85 73 bng 37 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 136 73 bng 37 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 254 313 outlet~;
+#X obj 55 134 f;
+#X obj 53 156 t b f;
+#X obj 257 144 f;
+#X obj 259 164 t b f;
+#X obj 254 234 del 50;
+#X text 87 20 track #;
+#X text 86 50 stop;
+#X text 137 51 play;
+#X text 33 49 Rec;
+#X obj -60 13 inlet~;
+#X obj 421 44 table \$0-sample;
+#X msg 344 231 read -resize track_\$1.wav \$0-sample;
+#X obj 256 269 tabplay~ \$0-sample;
+#X msg 358 310 bang;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 3 0 22 0;
+#X connect 4 0 10 1;
+#X connect 4 0 12 1;
+#X connect 5 0 10 0;
+#X connect 7 0 3 0;
+#X connect 8 0 12 0;
+#X connect 10 0 11 0;
+#X connect 11 0 2 0;
+#X connect 11 1 1 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 13 1 21 0;
+#X connect 14 0 22 0;
+#X connect 19 0 0 0;
+#X connect 21 0 6 0;
+#X connect 22 0 9 0;
+#X connect 22 1 23 0;
+#X connect 23 0 22 0;
+#X coords 0 -1 1 1 155 107 1 30 16;

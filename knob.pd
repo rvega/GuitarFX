@@ -1,0 +1,49 @@
+#N canvas 808 222 508 578 10;
+#X obj 44 116 moonlib/mknob 40 100 0 1 0 0 empty empty empty -2 -6
+0 8 -262144 -1 -1 9900 1;
+#X text 281 9 Parametros de creación:1: Rango inferior2: Rango
+superior3: Pow;
+#X obj 44 43 preset_node main;
+#X obj 45 188 pow \$3;
+#X obj 179 413 outlet;
+#X obj 179 248 -;
+#X obj 179 215 t b f;
+#X text 204 248 max - min;
+#X obj 179 279 t b f;
+#X obj 179 308 *;
+#X obj 217 335 t b f;
+#X obj 179 361 +;
+#X text 83 308 (max-min)*(in);
+#X text 48 360 min + (max-min)*(in);
+#X obj 120 188 f \$2;
+#X obj 178 188 f \$1;
+#X floatatom 35 266 5 0 0 0 - - -, f 5;
+#X obj 141 128 loadbang;
+#X obj 290 271 loadbang;
+#X floatatom 100 247 5 0 0 0 - - -, f 5;
+#X floatatom 264 211 5 0 0 0 - - -, f 5;
+#X floatatom 327 350 5 0 0 0 - - -, f 5;
+#X obj 217 308 f \$1;
+#X connect 0 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 16 0;
+#X connect 3 0 9 0;
+#X connect 5 0 8 0;
+#X connect 6 0 5 0;
+#X connect 6 1 5 1;
+#X connect 8 0 9 0;
+#X connect 8 1 9 1;
+#X connect 9 0 11 0;
+#X connect 9 0 21 0;
+#X connect 10 0 11 0;
+#X connect 10 1 11 1;
+#X connect 11 0 4 0;
+#X connect 14 0 5 0;
+#X connect 14 0 19 0;
+#X connect 15 0 6 0;
+#X connect 15 0 20 0;
+#X connect 17 0 14 0;
+#X connect 17 0 15 0;
+#X connect 18 0 22 0;
+#X connect 22 0 10 0;
+#X coords 0 -1 1 1 88 73 1 38 90;
