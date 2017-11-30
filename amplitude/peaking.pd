@@ -1,4 +1,4 @@
-#N canvas 178 58 733 483 10;
+#N canvas 509 139 733 495 10;
 #X obj 194 439 outlet~;
 #X obj 511 101 ../knob 20 20000 3;
 #X text 567 152 freq;
@@ -7,7 +7,7 @@
 #X text 780 140 Gain;
 #X obj 202 396 biquad~;
 #X obj 277 319 equalizer;
-#X obj 309 274 t b f;
+#X obj 306 271 t b f;
 #X obj 388 274 t b f;
 #X obj 227 25 inlet freq;
 #X obj 325 26 inlet bw;
@@ -20,7 +20,7 @@
 #X obj 436 180 t b f;
 #X obj 625 101 ../knob 0 100 2;
 #X obj 219 187 line 5;
-#X obj 722 101 ../knob 0 12 1;
+#X obj 722 101 ../knob 0 24 1;
 #X connect 1 0 16 0;
 #X connect 3 0 6 0;
 #X connect 6 0 0 0;
